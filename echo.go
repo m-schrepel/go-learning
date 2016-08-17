@@ -27,7 +27,7 @@ func concatenate() (end int64) {
 
 // did not know that specifying the return (end int64) counted as a declaration
 // and therefor end := time.Since(...) was wrong
-func join()(end int64) {
+func join() (end int64) {
   start := time.Now()
   strings.Join(os.Args[1:], " ")
   end = time.Since(start).Nanoseconds()
